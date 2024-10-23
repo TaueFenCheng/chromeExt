@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Hello Extensions",
+  "version": "1.0",
+  "description": "自定义chrome 插件",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "assets/index.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "https://*/*"
+        // "https://developer.chrome.com/docs/extensions/*",
+        // "https://developer.chrome.com/docs/webstore/*"
+      ]
+    }
+  ]
+}
