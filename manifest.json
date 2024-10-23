@@ -7,6 +7,11 @@
     "default_popup": "index.html",
     "default_icon": "assets/index.png"
   },
+  "icons": {
+    "16": "assets/index.png",
+    "32": "assets/index.png",
+    "48": "assets/index.png"
+  },
   "content_scripts": [
     {
       "js": ["scripts/content.js"],
@@ -16,5 +21,9 @@
         // "https://developer.chrome.com/docs/webstore/*"
       ]
     }
-  ]
+  ],
+  "background": {
+    "service_worker": "scripts/background.js"
+  },
+  "permissions": ["activeTab","scripting","storage","cookies"]
 }
